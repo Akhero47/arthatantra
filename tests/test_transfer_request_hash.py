@@ -1,6 +1,6 @@
 import hashlib
 
-from transfer_request_hash import hash_transfer_request
+from app.transfer.transfer_request_hash import hash_transfer_request
 
 
 def test_same_request_produces_same_hash() -> None:

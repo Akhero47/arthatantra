@@ -2,7 +2,7 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from models import Account, AccountTransaction, Transfer
+from app.models import Account, AccountTransaction, Transfer
 
 
 class DuplicateIdempotencyKey(Exception):

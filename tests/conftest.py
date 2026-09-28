@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy.engine import Connection, make_url
 from sqlalchemy.orm import Session
 
-from config import settings
+from app.config import settings
 
 test_database_url = os.environ.get("TEST_DATABASE_URL")
 if not test_database_url:
@@ -22,8 +22,8 @@ if application_url.database == test_url.database:
 os.environ["DATABASE_URL"] = test_database_url
 settings.database_url = test_database_url
 
-from db import engine, get_db
-from main import app
+from app.db import engine, get_db
+from app.main import app
 
 
 @pytest.fixture

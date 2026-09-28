@@ -7,10 +7,10 @@ from sqlalchemy import delete, event, func, or_, select
 from sqlalchemy.engine import Connection
 from sqlalchemy.orm import Session
 
-import transfer_repository
-from db import SessionLocal, engine
-from models import Account, AccountTransaction, Transfer
-from transfer_service import (
+import app.transfer.transfer_repository as transfer_repository
+from app.db import SessionLocal, engine
+from app.models import Account, AccountTransaction, Transfer
+from app.transfer.transfer_service import (
     InsufficientFundsError,
     InvalidTransferAmountError,
     SameAccountError,

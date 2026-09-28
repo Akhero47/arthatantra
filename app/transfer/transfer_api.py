@@ -3,11 +3,11 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, Header, Response, status
 from sqlalchemy.orm import Session
 
-import transfer_service
-from api_errors import ErrorResponse
-from db import get_db
-from models import Transfer
-from transfer_schemas import TransferCreate, TransferResponse
+import app.transfer.transfer_service as transfer_service
+from app.api_errors import ErrorResponse
+from app.db import get_db
+from app.models import Transfer
+from app.transfer.transfer_schemas import TransferCreate, TransferResponse
 
 
 router = APIRouter(prefix="/transfers", tags=["transfers"])

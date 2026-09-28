@@ -12,11 +12,11 @@ from sqlalchemy.engine import Connection
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import Session
 
-import transfer_repository
-from db import SessionLocal, engine
-from main import app
-from models import Account, AccountTransaction, Transfer
-from transfer_request_hash import hash_transfer_request
+import app.transfer.transfer_repository as transfer_repository
+from app.db import SessionLocal, engine
+from app.main import app
+from app.models import Account, AccountTransaction, Transfer
+from app.transfer.transfer_request_hash import hash_transfer_request
 
 
 def post_transfer(client: TestClient, body: dict, key: str | None = None) -> Response:

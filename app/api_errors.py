@@ -5,8 +5,8 @@ from pydantic import BaseModel, Field
 from sqlalchemy.exc import IntegrityError, OperationalError, SQLAlchemyError
 from starlette.exceptions import HTTPException
 
-import account_service
-import transfer_service
+import app.account.account_service as account_service
+import app.transfer.transfer_service as transfer_service
 
 
 class ValidationIssue(BaseModel):

@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
 
-import transfer_repository
-from models import Transfer
-from transfer_request_hash import hash_transfer_request
+import app.transfer.transfer_repository as transfer_repository
+from app.models import Transfer
+from app.transfer.transfer_request_hash import hash_transfer_request
 
 
 class InvalidTransferAmountError(Exception):

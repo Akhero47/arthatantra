@@ -5,8 +5,8 @@ from sqlalchemy import inspect
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from db import engine
-from models import Account, AccountTransaction, Transfer
+from app.db import engine
+from app.models import Account, AccountTransaction, Transfer
 
 
 @pytest.fixture

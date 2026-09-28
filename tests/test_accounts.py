@@ -3,7 +3,7 @@ from fastapi.testclient import TestClient
 from sqlalchemy.engine import Connection
 from sqlalchemy.orm import Session
 
-from models import Account
+from app.models import Account
 
 
 @pytest.mark.parametrize("body", [None, {}])

@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
-import account_repository
-from models import Account, AccountTransaction
+import app.account.account_repository as account_repository
+from app.models import Account, AccountTransaction
 
 
 class AccountNotFoundError(Exception):

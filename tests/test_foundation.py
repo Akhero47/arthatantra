@@ -2,8 +2,8 @@ from fastapi.testclient import TestClient
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from db import get_db
-from main import app
+from app.db import get_db
+from app.main import app
 
 
 def test_openapi_exposes_account_and_transfer_routes() -> None:

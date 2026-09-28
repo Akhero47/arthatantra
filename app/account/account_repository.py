@@ -1,7 +1,7 @@
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from models import Account, AccountTransaction
+from app.models import Account, AccountTransaction
 
 
 def create_account(session: Session) -> Account:

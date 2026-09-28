@@ -3,11 +3,11 @@ from typing import Annotated
 from fastapi import APIRouter, Body, Depends, Path, Query, status
 from sqlalchemy.orm import Session
 
-import account_service
-from account_schemas import AccountCreate, AccountResponse, AccountTransactionPage
-from api_errors import ErrorResponse
-from db import get_db
-from models import Account
+import app.account.account_service as account_service
+from app.account.account_schemas import AccountCreate, AccountResponse, AccountTransactionPage
+from app.api_errors import ErrorResponse
+from app.db import get_db
+from app.models import Account
 
 
 router = APIRouter(prefix="/accounts", tags=["accounts"])

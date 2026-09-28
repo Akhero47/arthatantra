@@ -6,7 +6,7 @@ from sqlalchemy import event, select
 from sqlalchemy.engine import Connection
 from sqlalchemy.orm import Session
 
-from models import Account, AccountTransaction
+from app.models import Account, AccountTransaction
 
 
 @pytest.fixture
