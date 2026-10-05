@@ -54,8 +54,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-      test-db:
-        condition: service_healthy
   
   app-test:
     profiles:
@@ -66,6 +64,7 @@ services:
       dockerfile: Dockerfile
 
     environment:
+      DATABASE_URL: postgresql+psycopg://arthatantra:arthatantra@test-db:5432/arthatantra_test
       TEST_DATABASE_URL: postgresql+psycopg://arthatantra:arthatantra@test-db:5432/arthatantra_test
 
     ports:

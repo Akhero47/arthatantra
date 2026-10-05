@@ -16,6 +16,12 @@ docker compose run --rm \
   -e DATABASE_URL=postgresql+psycopg://arthatantra:arthatantra@test-db:5432/arthatantra_test \
   app alembic upgrade head
 
+echo "Seeding test accounts..."
+docker compose run --rm \
+  --no-deps \
+  -e DATABASE_URL=postgresql+psycopg://arthatantra:arthatantra@test-db:5432/arthatantra_test \
+  app python -m scripts.seed_accounts
+
 echo "Starting FastAPI against test database..."
 docker compose --profile test up -d app-test
 
